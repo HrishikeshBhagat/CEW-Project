@@ -332,13 +332,13 @@
         backdrop-filter: blur(10px);
       }
       .float-card.one {
-        left: -30px;
-        bottom: 38px;
+        left: -147px;
+        bottom: -48px;
         width: 220px;
       }
       .float-card.two {
-        right: -22px;
-        top: 34px;
+        right: -12px;
+        top: -34px;
         width: 175px;
       }
       .float-card b {
@@ -1185,6 +1185,21 @@
         section {
           padding: 78px 0;
         }
+
+        @media (min-width: 400px) {
+          .hero-photo {
+            height: 715px;
+            width: 95%;
+            object-fit: cover;
+            border-radius: 34px;
+            box-shadow: 0 35px 100px rgba(0, 0, 0, 0.42);
+            border: 1px solid rgba(255, 255, 255, 0.17);
+            filter: saturate(1.08);
+          }
+          .float-card.two {
+            top: -59px;
+          }
+        }
       }
     </style>
     <link
@@ -1264,7 +1279,7 @@
                 >of business experience stated in the CEW presentation</small
               >
             </div>
-            <div class="float-card two">
+            <div class="float-card two float-card-two">
               <small>CEW principle</small><b>Integrity</b
               ><small>Honesty · Transparency</small>
             </div>
