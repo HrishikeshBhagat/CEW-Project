@@ -1,0 +1,2012 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Creative Engineering Works (CEW) — Engineering, Energy, Technology and IT services across project management, electrical infrastructure, solar, digital solutions and smart technologies."
+    />
+    <title>Creative Engineering Works | Engineering, Energy & Technology</title>
+    <link rel="icon" href="site-assets/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #061827;
+        --navy2: #0b2d43;
+        --blue: #0877c9;
+        --cyan: #35c7e7;
+        --red: #e94d43;
+        --ink: #102333;
+        --muted: #637481;
+        --line: #dce7ed;
+        --soft: #f3f8fa;
+        --white: #fff;
+        --shadow: 0 25px 80px rgba(4, 25, 40, 0.13);
+        --radius: 26px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+        background: #fff;
+        line-height: 1.65;
+      }
+      body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(
+            circle at 20% 10%,
+            rgba(53, 199, 231, 0.06),
+            transparent 22%
+          ),
+          radial-gradient(
+            circle at 90% 40%,
+            rgba(8, 119, 201, 0.05),
+            transparent 25%
+          );
+        z-index: -1;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      .container {
+        width: min(1180px, 92%);
+        margin: auto;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--blue);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .eyebrow:before {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--blue), var(--cyan));
+        border-radius: 10px;
+      }
+      .eyebrow.light {
+        color: #8de8f6;
+      }
+      .eyebrow.light:before {
+        background: #8de8f6;
+      }
+      .topline {
+        background: #04131f;
+        color: #a9c1cd;
+        font-size: 12px;
+      }
+      .topline .container {
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .topline a {
+        color: #fff;
+      }
+      .topline .right {
+        display: flex;
+        gap: 20px;
+      }
+      header {
+        position: fixed;
+        top: 38px;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        transition: 0.35s;
+      }
+      header.scrolled {
+        top: 10px;
+      }
+      .nav {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(18px);
+        border-radius: 22px;
+        padding: 0 15px 0 20px;
+        box-shadow: 0 12px 40px rgba(5, 30, 45, 0.08);
+      }
+      .logo {
+        width: 150px;
+      }
+      .navlinks {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .navlinks a {
+        color: #314452;
+        position: relative;
+      }
+      .navlinks a:not(.navcta):after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        width: 0;
+        height: 2px;
+        background: var(--blue);
+        transition: 0.25s;
+      }
+      .navlinks a:hover:after {
+        width: 100%;
+      }
+      .navcta,
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        border-radius: 999px;
+        font-weight: 800;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .navcta {
+        padding: 12px 18px;
+        background: var(--navy);
+        color: #fff !important;
+      }
+      .navcta:hover {
+        transform: translateY(-2px);
+        background: var(--blue);
+      }
+      .menu {
+        display: none;
+        border: 0;
+        background: transparent;
+        font-size: 27px;
+        color: var(--navy);
+      }
+      .hero {
+        min-height: 900px;
+        background: var(--navy);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding-top: 145px;
+      }
+      .hero:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 70% 35%,
+            rgba(53, 199, 231, 0.25),
+            transparent 27%
+          ),
+          radial-gradient(
+            circle at 10% 80%,
+            rgba(8, 119, 201, 0.22),
+            transparent 30%
+          );
+      }
+      .gridlines {
+        position: absolute;
+        inset: 0;
+        opacity: 0.08;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.7) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.7) 1px, transparent 1px);
+        background-size: 80px 80px;
+        mask-image: linear-gradient(to bottom, #000, transparent 85%);
+      }
+      .hero .container {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1.03fr 0.97fr;
+        gap: 60px;
+        align-items: center;
+        min-height: 720px;
+      }
+      .hero h1 {
+        font: 800 clamp(44px, 5.6vw, 76px)/0.98 Manrope;
+        margin: 20px 0 24px;
+        letter-spacing: -0.045em;
+      }
+      .hero h1 .accent {
+        background: linear-gradient(90deg, #fff, #55d9ef);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero p {
+        max-width: 650px;
+        color: #bdd1da;
+        font-size: 18px;
+      }
+      .hero-actions {
+        display: flex;
+        gap: 13px;
+        flex-wrap: wrap;
+        margin-top: 32px;
+      }
+      .btn {
+        padding: 14px 21px;
+        font-size: 13px;
+        border: 1px solid transparent;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, #0a84d7, #27bddb);
+        color: #fff;
+        box-shadow: 0 15px 35px rgba(8, 119, 201, 0.28);
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 45px rgba(8, 119, 201, 0.38);
+      }
+      .btn-outline {
+        border-color: rgba(255, 255, 255, 0.22);
+        color: #fff;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .btn-outline:hover {
+        background: #fff;
+        color: var(--navy);
+      }
+      .hero-visual {
+        position: relative;
+      }
+      .hero-photo {
+        height: 570px;
+        width: 75%;
+        object-fit: cover;
+        border-radius: 34px;
+        box-shadow: 0 35px 100px rgba(0, 0, 0, 0.42);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+        filter: saturate(1.08);
+      }
+      .hero-photo {
+        image-rendering: auto;
+        object-position: center center;
+      }
+      .hero-visual .photo-credit {
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        z-index: 4;
+        background: rgba(3, 17, 27, 0.68);
+        color: #d8edf3;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        backdrop-filter: blur(12px);
+        padding: 7px 10px;
+        border-radius: 999px;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+      }
+      .hero-visual:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 34px;
+        background: linear-gradient(
+          180deg,
+          transparent 40%,
+          rgba(0, 12, 20, 0.5)
+        );
+      }
+      .float-card {
+        position: absolute;
+        z-index: 3;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--ink);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 17px 19px;
+        backdrop-filter: blur(10px);
+      }
+      .float-card.one {
+        left: -30px;
+        bottom: 38px;
+        width: 220px;
+      }
+      .float-card.two {
+        right: -22px;
+        top: 34px;
+        width: 175px;
+      }
+      .float-card b {
+        font: 800 27px Manrope;
+        color: var(--blue);
+        display: block;
+      }
+      .float-card small {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .pulse {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: #39d69b;
+        box-shadow: 0 0 0 7px rgba(57, 214, 155, 0.12);
+        display: inline-block;
+        margin-right: 7px;
+      }
+      .marquee {
+        background: #0a2536;
+        color: #9db8c4;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+      }
+      .track {
+        width: max-content;
+        display: flex;
+        gap: 48px;
+        padding: 16px 0;
+        animation: scroll 28s linear infinite;
+      }
+      .track span {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      .dot {
+        color: #2fc7e7;
+      }
+      @keyframes scroll {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      section {
+        padding: 105px 0;
+      }
+      .section-title {
+        font: 800 clamp(32px, 4vw, 52px)/1.06 Manrope;
+        letter-spacing: -0.035em;
+        margin: 13px 0 16px;
+      }
+      .section-sub {
+        color: var(--muted);
+        max-width: 720px;
+        font-size: 16px;
+      }
+      .about {
+        display: grid;
+        grid-template-columns: 0.88fr 1.12fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .quote {
+        font: 700 30px/1.25 Manrope;
+        letter-spacing: -0.02em;
+      }
+      .quote span {
+        color: var(--blue);
+      }
+      .about-copy p {
+        color: var(--muted);
+        margin-top: 0;
+      }
+      .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 32px;
+      }
+      .value {
+        padding: 20px;
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+      }
+      .value b {
+        font-size: 13px;
+      }
+      .value p {
+        font-size: 12px;
+        margin: 5px 0 0;
+        color: var(--muted);
+      }
+      .focus {
+        background: var(--soft);
+      }
+      .focus-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+        margin-bottom: 45px;
+      }
+      .focus-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 13px;
+      }
+      .focus-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 23px;
+        min-height: 150px;
+        position: relative;
+        overflow: hidden;
+        transition: 0.35s;
+      }
+      .focus-card:before {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: rgba(53, 199, 231, 0.12);
+        right: -20px;
+        top: -20px;
+      }
+      .focus-card:hover {
+        transform: translateY(-7px);
+        box-shadow: var(--shadow);
+        border-color: #b9dbe6;
+      }
+      .num {
+        font-size: 10px;
+        font-weight: 800;
+        color: var(--cyan);
+      }
+      .focus-card h3 {
+        font: 700 16px Manrope;
+        margin: 11px 0 6px;
+      }
+      .focus-card p {
+        font-size: 12px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 18px;
+      }
+      .expertise {
+        grid-column: span 4;
+        height: 330px;
+        border-radius: 26px;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        background: #092338;
+      }
+      .expertise:nth-child(1),
+      .expertise:nth-child(2) {
+        grid-column: span 6;
+      }
+      .expertise img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.6s;
+      }
+      .expertise:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(2, 15, 25, 0.05),
+          rgba(2, 15, 25, 0.92)
+        );
+        z-index: 1;
+      }
+      .expertise:hover img {
+        transform: scale(1.07);
+      }
+      .expertise-content {
+        position: absolute;
+        left: 25px;
+        right: 25px;
+        bottom: 24px;
+        z-index: 2;
+      }
+      .tag {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #8be8f7;
+      }
+      .expertise h3 {
+        font: 700 25px Manrope;
+        margin: 7px 0 4px;
+      }
+      .expertise p {
+        margin: 0;
+        color: #c8dbe3;
+        font-size: 12px;
+      }
+      .service-wrap {
+        background: linear-gradient(180deg, #fff 0, #f6fafc 100%);
+      }
+      .service {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 75px;
+        align-items: center;
+        margin-top: 65px;
+      }
+      .service:first-child {
+        margin-top: 0;
+      }
+      .service.reverse .service-media {
+        order: 2;
+      }
+      .service-media {
+        position: relative;
+      }
+      .service-media img {
+        height: 420px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+      }
+      .service-media:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        bottom: -16px;
+        width: 90%;
+        height: 90%;
+        border: 1px solid rgba(8, 119, 201, 0.15);
+        border-radius: 28px;
+        z-index: -1;
+      }
+      .pill {
+        display: inline-flex;
+        padding: 7px 11px;
+        border-radius: 999px;
+        background: #eaf7fb;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+      }
+      .service h3 {
+        font: 800 36px/1.1 Manrope;
+        margin: 16px 0;
+      }
+      .service p,
+      .service li {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .service ul {
+        padding-left: 18px;
+      }
+      .service li {
+        margin: 8px 0;
+      }
+      .check {
+        color: var(--blue);
+        font-weight: 800;
+      }
+      .projects {
+        background: var(--navy);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .projects:before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        right: -250px;
+        top: -220px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(53, 199, 231, 0.17),
+          transparent 65%
+        );
+      }
+      .projects .section-sub {
+        color: #a9c3cf;
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 45px;
+      }
+      .project {
+        background: #0c2a3d;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 23px;
+        overflow: hidden;
+        transition: 0.35s;
+      }
+      .project:hover {
+        transform: translateY(-8px);
+        border-color: rgba(53, 199, 231, 0.5);
+      }
+      .project img {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.5s;
+      }
+      .project:hover img {
+        transform: scale(1.04);
+      }
+      .project-body {
+        padding: 20px;
+      }
+      .project-body .small {
+        color: #6edcf0;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .project-body h3 {
+        font: 700 18px Manrope;
+        margin: 7px 0;
+      }
+      .project-body p {
+        font-size: 12px;
+        color: #a9c3cf;
+        margin: 0;
+      }
+      .impact {
+        padding: 0;
+        background: #071d2c;
+      }
+      .impact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+      .impact-card {
+        padding: 35px 25px;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+      }
+      .impact-card:last-child {
+        border-right: 0;
+      }
+      .impact-card b {
+        font: 800 34px Manrope;
+        color: #fff;
+      }
+      .impact-card span {
+        display: block;
+        color: #8faebc;
+        font-size: 11px;
+        margin-top: 5px;
+      }
+      .contact {
+        padding-bottom: 85px;
+      }
+      .contact-box {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 50px;
+        background: linear-gradient(135deg, #edf8fb, #f8fbfc);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 55px;
+      }
+      .contact-box h2 {
+        font: 800 42px/1.05 Manrope;
+        margin: 15px 0;
+      }
+      .contact-box p {
+        color: var(--muted);
+      }
+      .contact-list {
+        display: grid;
+        gap: 14px;
+        margin-top: 27px;
+      }
+      .contact-item {
+        display: flex;
+        gap: 13px;
+        align-items: flex-start;
+      }
+      .icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 11px;
+        background: #fff;
+        display: grid;
+        place-items: center;
+        color: var(--blue);
+        font-weight: 800;
+        border: 1px solid var(--line);
+      }
+      .contact-item b {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #70818b;
+      }
+      .contact-item a,
+      .contact-item span {
+        font-size: 13px;
+      }
+      .offices {
+        display: grid;
+        gap: 13px;
+      }
+      .office {
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 18px;
+        border-radius: 17px;
+      }
+      .office b {
+        font-size: 11px;
+        color: var(--blue);
+        letter-spacing: 0.08em;
+      }
+      .office p {
+        font-size: 12px;
+        margin: 5px 0 0;
+        color: var(--muted);
+      }
+      footer {
+        background: linear-gradient(145deg, #03131f, #071f31 60%, #082a3c);
+        color: #91aeba;
+        padding: 78px 0 22px;
+        position: relative;
+        overflow: hidden;
+      }
+      .site-footer:before {
+        content: "";
+        position: absolute;
+        width: 520px;
+        height: 520px;
+        right: -260px;
+        top: -270px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(53, 199, 231, 0.13),
+          transparent 68%
+        );
+        pointer-events: none;
+      }
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1.45fr 0.8fr 1fr 1.15fr;
+        gap: 55px;
+        position: relative;
+        z-index: 1;
+      }
+      .footer-brand {
+        max-width: 360px;
+      }
+      .footer-logo {
+        width: 150px;
+        filter: brightness(0) invert(1);
+        opacity: 0.95;
+      }
+      .footer-brand p {
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 20px 0;
+        color: #9fb8c3;
+      }
+      .footer-badges {
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+      }
+      .footer-badges span {
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        padding: 7px 9px;
+        border-radius: 999px;
+        color: #c9e3ea;
+      }
+      .footer-col {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col h4 {
+        font: 800 13px Manrope;
+        color: #fff;
+        margin: 0 0 8px;
+      }
+      .footer-col a,
+      .footer-col span {
+        font-size: 12px;
+        color: #91aeba;
+        transition: 0.25s;
+      }
+      .footer-col a:hover {
+        color: #54d8ed;
+        transform: translateX(3px);
+      }
+      .footer-contact {
+        gap: 12px;
+      }
+      .footer-contact .social {
+        display: flex;
+        gap: 9px;
+        margin-top: 5px;
+      }
+      .footer-contact .social a {
+        width: 38px;
+        height: 38px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 12px;
+      }
+      .footer-bottom {
+        margin-top: 55px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 10px;
+        color: #7894a0;
+        position: relative;
+        z-index: 1;
+      }
+      .footer-links {
+        display: flex;
+        gap: 9px;
+      }
+      .footer-links a:hover {
+        color: #fff;
+      }
+      .image-credits {
+        margin-top: 15px;
+        font-size: 9px;
+        color: #5e7884;
+        position: relative;
+        z-index: 1;
+      }
+      .topbtn {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 45px;
+        height: 45px;
+        border: 0;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #fff;
+        font-size: 20px;
+        z-index: 90;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      .topbtn.show {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.75s ease,
+          transform 0.75s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      .cursor-glow {
+        position: fixed;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: radial-gradient(
+          circle,
+          rgba(53, 199, 231, 0.12),
+          transparent 68%
+        );
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      .tech-section {
+        background: linear-gradient(180deg, #f7fbfd 0%, #eef7fa 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .tech-section:before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        right: -220px;
+        top: -180px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(53, 199, 231, 0.16),
+          transparent 68%
+        );
+      }
+      .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 45px;
+        position: relative;
+      }
+      .tech-card {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        padding: 28px;
+        min-height: 235px;
+        transition: 0.35s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .tech-card:after {
+        content: "";
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        right: -45px;
+        bottom: -45px;
+        border-radius: 50%;
+        background: rgba(8, 119, 201, 0.06);
+        transition: 0.35s;
+      }
+      .tech-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 65px rgba(4, 25, 40, 0.12);
+        border-color: #b9dbe6;
+      }
+      .tech-card:hover:after {
+        transform: scale(1.35);
+      }
+      .tech-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 13px;
+        display: grid;
+        place-items: center;
+        background: #e8f7fb;
+        color: var(--blue);
+        font: 800 11px Manrope;
+        letter-spacing: 0.08em;
+        margin-bottom: 22px;
+      }
+      .tech-card h3 {
+        font: 800 20px Manrope;
+        margin: 0 0 10px;
+      }
+      .tech-card p {
+        color: var(--muted);
+        font-size: 13px;
+        margin: 0 0 18px;
+      }
+      .tech-card span {
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 950px) {
+        .navlinks {
+          display: none;
+          position: absolute;
+          top: 82px;
+          left: 0;
+          right: 0;
+          padding: 18px;
+          background: rgba(255, 255, 255, 0.97);
+          border: 1px solid var(--line);
+          border-radius: 18px;
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .navlinks.open {
+          display: flex;
+        }
+        .menu {
+          display: block;
+        }
+        .hero .container,
+        .about,
+        .service,
+        .contact-box {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding-top: 130px;
+        }
+        .hero-visual {
+          margin-top: 20px;
+        }
+        .focus-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .expertise:nth-child(n),
+        .expertise:nth-child(1),
+        .expertise:nth-child(2) {
+          grid-column: span 6;
+        }
+        .project-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .tech-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .impact-card:nth-child(2) {
+          border-right: 0;
+        }
+        .impact-card:nth-child(-n + 2) {
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .service.reverse .service-media {
+          order: 0;
+        }
+        .about {
+          gap: 40px;
+        }
+        .focus-top {
+          display: block;
+        }
+        .focus-top .section-sub {
+          margin-top: 10px;
+        }
+      }
+      @media (max-width: 600px) {
+        .topline .right {
+          display: none;
+        }
+        .topline .container {
+          justify-content: center;
+        }
+        .topline {
+          font-size: 10px;
+        }
+        .hero {
+          min-height: auto;
+        }
+        .hero .container {
+          padding: 45px 0 90px;
+        }
+        .hero h1 {
+          font-size: 45px;
+        }
+        .hero p {
+          font-size: 15px;
+        }
+        .hero-photo {
+          height: 360px;
+        }
+        .float-card.one {
+          left: 10px;
+          bottom: 20px;
+        }
+        .float-card.two {
+          right: 10px;
+          top: 15px;
+        }
+        .values,
+        .focus-grid,
+        .project-grid,
+        .impact-grid,
+        .tech-grid {
+          grid-template-columns: 1fr;
+        }
+        .expertise:nth-child(n),
+        .expertise:nth-child(1),
+        .expertise:nth-child(2) {
+          grid-column: span 12;
+        }
+        .expertise {
+          height: 290px;
+        }
+        .service {
+          gap: 35px;
+        }
+        .service h3 {
+          font-size: 30px;
+        }
+        .service-media img {
+          height: 300px;
+        }
+        .contact-box {
+          padding: 28px;
+        }
+        .contact-box h2 {
+          font-size: 33px;
+        }
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+          gap: 38px;
+        }
+        .footer-bottom {
+          display: block;
+          line-height: 1.8;
+        }
+        .footer-links {
+          margin-top: 8px;
+        }
+        .cursor-glow {
+          display: none;
+        }
+        section {
+          padding: 78px 0;
+        }
+      }
+    </style>
+    <link
+      rel="preload"
+      as="image"
+      href="https://upload.wikimedia.org/wikipedia/commons/d/dd/Solar_panels_in_India.jpg"
+    />
+  </head>
+  <body>
+    <div class="cursor-glow" id="glow"></div>
+    <div class="topline">
+      <div class="container">
+        <span>CREATIVE ENGINEERING WORKS · PROJECT MANAGEMENT CONSULTANCY</span>
+        <div class="right">
+          <a href="tel:+919764447626">+91 97644 47626</a
+          ><a href="mailto:info@creativepmc.in">info@creativepmc.in</a>
+        </div>
+      </div>
+    </div>
+    <header id="header">
+      <div class="container nav">
+        <a href="#home"
+          ><img
+            src="site-assets/LOGO-removebg.png"
+            class="logo"
+            alt="Creative Engineering Works" /></a
+        ><button class="menu" id="menu" aria-label="Open menu">☰</button>
+        <nav class="navlinks" id="nav">
+          <a href="#about">About</a><a href="#focus">PMC</a
+          ><a href="#expertise">Expertise</a><a href="#projects">Projects</a
+          ><a href="#contact">Contact</a
+          ><a class="navcta" href="mailto:info@creativepmc.in"
+            >Start a conversation ↗</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero" id="home">
+        <div class="gridlines"></div>
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow light">Engineering · Energy · Technology</div>
+            <h1>
+              Engineering, energy &<br /><span class="accent"
+                >technology solutions.</span
+              >
+            </h1>
+            <p>
+              Creative Engineering Works brings together project management,
+              electrical infrastructure, renewable energy, smart technologies
+              and IT-enabled business solutions to help organizations plan,
+              execute and improve critical projects.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#expertise"
+                >Explore expertise →</a
+              ><a class="btn btn-outline" href="#projects"
+                >View project experience</a
+              >
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <img
+              class="hero-photo"
+              src="site-assets/solarpexels.jpg"
+              alt="Solar panels and electrical grid infrastructure in India"
+              fetchpriority="high"
+            />
+            <!-- <div class="photo-credit">
+              High-resolution visual · Wikimedia Commons
+            </div> -->
+            <div class="float-card one">
+              <span class="pulse"></span
+              ><small>Built around project outcomes</small><b>3 Decades</b
+              ><small
+                >of business experience stated in the CEW presentation</small
+              >
+            </div>
+            <div class="float-card two">
+              <small>CEW principle</small><b>Integrity</b
+              ><small>Honesty · Transparency</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="marquee">
+        <div class="track">
+          <span>Electrical Infrastructure</span><i class="dot">✦</i
+          ><span>Transmission & Distribution</span><i class="dot">✦</i
+          ><span>Solar PV</span><i class="dot">✦</i><span>IT Services</span
+          ><i class="dot">✦</i><span>Digital Solutions</span><i class="dot">✦</i
+          ><span>EV Solutions</span><i class="dot">✦</i><span>Smart Living</span
+          ><i class="dot">✦</i><span>Technology Integration</span
+          ><i class="dot">✦</i><span>Electrical Infrastructure</span
+          ><i class="dot">✦</i><span>Transmission & Distribution</span
+          ><i class="dot">✦</i><span>Solar PV</span><i class="dot">✦</i
+          ><span>IT Services</span>
+        </div>
+      </div>
+      <section id="about">
+        <div class="container about">
+          <div class="reveal">
+            <div class="eyebrow">About CEW</div>
+            <div class="quote">
+              “Not just consulting… but <span>value addition</span> by thinking
+              to make impactful change.”
+            </div>
+          </div>
+          <div class="about-copy reveal">
+            <p>
+              Creative Engineering Works is an experienced and dynamic
+              multidisciplinary consultancy focused on delivering practical
+              outcomes across engineering, energy and technology-led projects.
+              Its approach combines project discipline with technical and
+              digital capabilities.
+            </p>
+            <p>
+              CEW works closely with clients to align people, processes,
+              technology and project objectives. Alongside electrical and energy
+              expertise, its technology offering supports IT services, digital
+              transformation, business applications, infrastructure and
+              connected solutions.
+            </p>
+            <div class="values">
+              <div class="value">
+                <b>Honesty</b>
+                <p>A core value stated by CEW.</p>
+              </div>
+              <div class="value">
+                <b>Integrity</b>
+                <p>Professional conduct and accountability.</p>
+              </div>
+              <div class="value">
+                <b>Transparency</b>
+                <p>Clear project communication.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="focus" id="focus">
+        <div class="container">
+          <div class="focus-top reveal">
+            <div>
+              <div class="eyebrow">Our PMC focus</div>
+              <h2 class="section-title">
+                The disciplines that keep projects moving.
+              </h2>
+            </div>
+            <p class="section-sub">
+              CEW's presentation identifies twelve focus areas spanning
+              commercial development, integration, resources, time, cost,
+              procurement, quality, communication, technical support and
+              monitoring.
+            </p>
+          </div>
+          <div class="focus-grid">
+            <div class="focus-card reveal">
+              <span class="num">01</span>
+              <h3>Business Development</h3>
+              <p>Support around opportunities and project objectives.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">02</span>
+              <h3>Project Integration</h3>
+              <p>Connecting project functions into one delivery approach.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">03</span>
+              <h3>Scope Management</h3>
+              <p>Keeping requirements and outcomes aligned.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">04</span>
+              <h3>Resource Management</h3>
+              <p>People, materials and execution resources.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">05</span>
+              <h3>Time Management</h3>
+              <p>Planning and on-time delivery control.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">06</span>
+              <h3>Cost Management</h3>
+              <p>Budget-focused project monitoring.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">07</span>
+              <h3>Procurement Management</h3>
+              <p>Material and vendor coordination.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">08</span>
+              <h3>Quality Management</h3>
+              <p>Quality assurance of material and work.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">09</span>
+              <h3>Communication Management</h3>
+              <p>Structured stakeholder coordination.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">10</span>
+              <h3>Technical Support</h3>
+              <p>Multidisciplinary technical assistance.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">11</span>
+              <h3>Periodic Reviews</h3>
+              <p>Regular review of project progress.</p>
+            </div>
+            <div class="focus-card reveal">
+              <span class="num">12</span>
+              <h3>Monitoring & Coordination</h3>
+              <p>Project monitoring and coordination service.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="expertise">
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow">Our expertise</div>
+            <h2 class="section-title">
+              Engineering, energy & technology capability.
+            </h2>
+            <p class="section-sub">
+              CEW combines its established engineering and energy capabilities
+              with technology and IT services designed around business and
+              project requirements.
+            </p>
+          </div>
+          <div class="expertise-grid" style="margin-top: 45px">
+            <article class="expertise reveal">
+              <img
+                src="site-assets/animalplanetearth-smart-home.png"
+                alt="Smart living technology"
+              />
+              <div class="expertise-content">
+                <span class="tag">05 · Technology</span>
+                <h3>Smart Living</h3>
+                <p>
+                  Technology-led approaches for connected and efficient
+                  environments.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="site-assets/IT-nfrastructureCloud.jpg"
+                alt="Modern IT server infrastructure"
+                loading="lazy"
+              />
+              <div class="expertise-content">
+                <span class="tag">07 · IT Services</span>
+                <h3>IT Infrastructure & Cloud</h3>
+                <p>
+                  Technology infrastructure, cloud environments, connectivity
+                  and operational support aligned to business needs.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="site-assets/DigitalBusinessSolutions.jpg"
+                alt="Modern technology workstations"
+                loading="lazy"
+              />
+              <div class="expertise-content">
+                <span class="tag">08 · Digital</span>
+                <h3>Digital Business Solutions</h3>
+                <p>
+                  Business applications, workflow digitization, data-led
+                  solutions and technology integration.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Power_transmission_towers%2C_Baesa_%28Quezon_City%3B_06-05-2021%29.jpg"
+                alt="High-voltage transmission towers and power lines"
+                loading="lazy"
+              />
+              <div class="expertise-content">
+                <span class="tag">01 · Electrical</span>
+                <h3>Transmission & Distribution</h3>
+                <p>
+                  End-to-end PMC for electrical infrastructure and T&D projects.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Solar_panels_in_India.jpg"
+                alt="Solar photovoltaic panels and grid infrastructure in India"
+                loading="lazy"
+              />
+              <div class="expertise-content">
+                <span class="tag">02 · Renewable</span>
+                <h3>Solar Energy</h3>
+                <p>
+                  Project management for Solar PV planning, execution and
+                  quality assurance.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="site-assets/slide4_10.webp"
+                alt="Radiant cooling pipes"
+              />
+              <div class="expertise-content">
+                <span class="tag">03 · Efficiency</span>
+                <h3>Radiant Cooling</h3>
+                <p>
+                  Innovative cooling using chilled-water circulation through
+                  building surfaces.
+                </p>
+              </div>
+            </article>
+            <article class="expertise reveal">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/92/SolarPoweredEVChargingStation.jpg"
+                alt="Solar powered electric vehicle charging station"
+                loading="lazy"
+              />
+              <div class="expertise-content">
+                <span class="tag">04 · Mobility</span>
+                <h3>EV / E-Mobility</h3>
+                <p>
+                  Fleet, public charging, battery storage, swapping, recycling
+                  and solar-integrated opportunities.
+                </p>
+              </div>
+            </article>
+            <!-- <article class="expertise reveal">
+              <img
+                src="site-assets/slide4_11.webp"
+                alt="Power transmission towers"
+              />
+              <div class="expertise-content">
+                <span class="tag">06 · Infrastructure</span>
+                <h3>Electrical Solutions</h3>
+                <p>
+                  Engineering coordination, technical support and project
+                  delivery assistance.
+                </p>
+              </div>
+            </article> -->
+          </div>
+        </div>
+      </section>
+      <section id="technology" class="tech-section">
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow">Technology & IT services</div>
+            <h2 class="section-title">
+              Technology that works alongside the business.
+            </h2>
+            <p class="section-sub">
+              CEW's technology practice is positioned around practical IT
+              services and digital enablement — from infrastructure and cloud to
+              applications, integration, automation and ongoing support.
+            </p>
+          </div>
+          <div class="tech-grid">
+            <article class="tech-card reveal">
+              <div class="tech-icon">01</div>
+              <h3>IT Consulting</h3>
+              <p>
+                Technology planning, solution assessment and practical roadmaps
+                aligned with organizational goals.
+              </p>
+              <span>Strategy · Advisory · Architecture</span>
+            </article>
+            <article class="tech-card reveal">
+              <div class="tech-icon">02</div>
+              <h3>Cloud & Infrastructure</h3>
+              <p>
+                Cloud adoption, infrastructure planning, connectivity and
+                technology operations for modern workplaces.
+              </p>
+              <span>Cloud · Infrastructure · Networks</span>
+            </article>
+            <article class="tech-card reveal">
+              <div class="tech-icon">03</div>
+              <h3>Business Applications</h3>
+              <p>
+                Digital applications and workflow solutions that help teams
+                improve visibility, collaboration and productivity.
+              </p>
+              <span>Web Apps · Portals · Workflow</span>
+            </article>
+            <article class="tech-card reveal">
+              <div class="tech-icon">04</div>
+              <h3>Integration & Automation</h3>
+              <p>
+                Connecting systems, data and processes to reduce manual effort
+                and create more efficient digital operations.
+              </p>
+              <span>APIs · Integration · Automation</span>
+            </article>
+            <article class="tech-card reveal">
+              <div class="tech-icon">05</div>
+              <h3>Data & Digital Enablement</h3>
+              <p>
+                Technology-led approaches for reporting, information flows and
+                better decision-making across operations.
+              </p>
+              <span>Data · Dashboards · Digital Processes</span>
+            </article>
+            <article class="tech-card reveal">
+              <div class="tech-icon">06</div>
+              <h3>Technology Support</h3>
+              <p>
+                Structured technical coordination and support designed to keep
+                business and project technology dependable.
+              </p>
+              <span>Support · Coordination · Maintenance</span>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="service-wrap">
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow">How CEW adds value</div>
+            <h2 class="section-title">
+              From planning and resources to quality and delivery control.
+            </h2>
+          </div>
+          <div class="service reveal">
+            <div class="service-media">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Power_transmission_towers%2C_Baesa_%28Quezon_City%3B_06-05-2021%29.jpg"
+                alt="High-voltage transmission towers and power lines"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span class="pill">TRANSMISSION & DISTRIBUTION</span>
+              <h3>Keeping critical electrical infrastructure aligned.</h3>
+              <p>
+                CEW describes its T&D PMC approach around understanding the
+                particular objective of each project, resource management,
+                material management, planning for on-time delivery and quality
+                assurance.
+              </p>
+              <ul>
+                <li>
+                  <span class="check">✓</span> Resource & material management
+                </li>
+                <li>
+                  <span class="check">✓</span> Planning and delivery control
+                </li>
+                <li><span class="check">✓</span> Quality assurance</li>
+                <li>
+                  <span class="check">✓</span> Experienced managers, engineers
+                  and supervisors
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="service reverse reveal">
+            <div class="service-media">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/dd/Solar_panels_in_India.jpg"
+                alt="Solar PV installation in India"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <span class="pill">SOLAR PV PROJECTS</span>
+              <h3>Project management built around solar outcomes.</h3>
+              <p>
+                For Solar PV projects, CEW states that it supports clients with
+                project understanding, resource and material management,
+                planning and close control for on-time delivery, plus quality
+                assurance.
+              </p>
+              <ul>
+                <li>
+                  <span class="check">✓</span> Back-office to on-site PMC
+                  support
+                </li>
+                <li>
+                  <span class="check">✓</span> Vendor and supplier network
+                </li>
+                <li>
+                  <span class="check">✓</span> Contractor and system-integrator
+                  network
+                </li>
+                <li>
+                  <span class="check">✓</span> Experience ranging from kW scale
+                  to around 7 MW
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="service reveal">
+            <div class="service-media">
+              <img
+                src="site-assets/slide4_10.webp"
+                alt="Radiant cooling floor system"
+              />
+            </div>
+            <div>
+              <span class="pill">RADIANT TECHNOLOGY</span>
+              <h3>Comfort engineered with energy efficiency in mind.</h3>
+              <p>
+                CEW presents radiant cooling as an innovative approach where
+                chilled water circulates through pipes installed in floors,
+                walls or ceilings. The presentation highlights its
+                energy-efficiency potential compared with forced-air systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="container">
+          <div class="reveal">
+            <div class="eyebrow light">CEW project experience</div>
+            <h2 class="section-title">Our Valued Clients.</h2>
+            <p class="section-sub">
+              To maintain Timeline, Quality, Budget and Good Workmanship in
+              projects, one of our associated company, Innovative Services, is
+              actively delivering various Solar and Electrical Projects for our
+              premium and prestigious customers.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project reveal">
+              <img src="site-assets/slide11_23.webp" alt="Solar project" />
+              <div class="project-body">
+                <span class="small">Solar · 2.1 MW</span>
+                <h3>Solar Power Plant</h3>
+                <p>Ground / rooftop solar project at SSSCT, PSN.</p>
+              </div>
+            </article>
+            <article class="project reveal">
+              <img
+                src="site-assets/slide11_24.webp"
+                alt="Rooftop solar project"
+              />
+              <div class="project-body">
+                <span class="small">Solar · 1 MW</span>
+                <h3>Rooftop Solar Power Plant</h3>
+                <p>Basant Educational Society, Jodhpur.</p>
+              </div>
+            </article>
+            <article class="project reveal">
+              <img
+                src="site-assets/slide13_28.webp"
+                alt="Solar rooftop project"
+              />
+              <div class="project-body">
+                <span class="small">Solar · 500 kW</span>
+                <h3>Rooftop Solar Project</h3>
+                <p>Sankalp Education Society, Odisha.</p>
+              </div>
+            </article>
+            <article class="project reveal">
+              <img
+                src="site-assets/slide13_29.webp"
+                alt="Solar carport installation"
+              />
+              <div class="project-body">
+                <span class="small">Solar · Rooftop & Carport</span>
+                <h3>180 kW New Solar Project</h3>
+                <p>
+                  Rooftop and carport installation referenced in the
+                  presentation.
+                </p>
+              </div>
+            </article>
+            <article class="project reveal">
+              <img
+                src="site-assets/slide15_32.webp"
+                alt="Ground mount solar plant"
+              />
+              <div class="project-body">
+                <span class="small">Solar · 2.5 MW</span>
+                <h3>Ground Mount Solar Plant</h3>
+                <p>Partial supply project in Jalgaon District, Maharashtra.</p>
+              </div>
+            </article>
+            <article class="project reveal">
+              <img
+                src="site-assets/slide15_33.webp"
+                alt="Solar power plant maintenance"
+              />
+              <div class="project-body">
+                <span class="small">AMC · Multi-location</span>
+                <h3>Solar Plant AMC Portfolio</h3>
+                <p>
+                  AMC of rooftop and ground-mounted solar plants across Andhra
+                  Pradesh and Karnataka, plus Odisha projects.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="impact">
+        <div class="container impact-grid">
+          <div class="impact-card reveal">
+            <b>3 Decades</b><span>Business experience stated by CEW</span>
+          </div>
+          <div class="impact-card reveal">
+            <b>~7 MW</b
+            ><span>Largest project scale referenced in Solar PMC section</span>
+          </div>
+          <div class="impact-card reveal">
+            <b>2.1 MW</b><span>Selected solar project example</span>
+          </div>
+          <div class="impact-card reveal">
+            <b>12</b
+            ><span>PMC focus disciplines identified in the presentation</span>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-box reveal">
+            <div>
+              <div class="eyebrow">Let's work together</div>
+              <h2>Turn project objectives into controlled delivery.</h2>
+              <p>
+                For project management consultancy, electrical infrastructure,
+                solar or related opportunities, connect with the CEW team.
+              </p>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <div class="icon">☎</div>
+                  <div>
+                    <b>Phone</b><a href="tel:+919764447626">+91 97644 47626</a
+                    ><br /><a href="tel:+919764447630">+91 97644 47630</a
+                    ><br /><a href="tel:+918875027381">+91 88750 27381</a>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="icon">✉</div>
+                  <div>
+                    <b>Email</b
+                    ><a href="mailto:info@creativepmc.in">info@creativepmc.in</a
+                    ><br /><a href="mailto:amolshirsath@creativepmc.in"
+                      >amolshirsath@creativepmc.in</a
+                    ><br /><a href="mailto:pankajpatel@creativepmc.in"
+                      >pankajpatel@creativepmc.in</a
+                    >
+                  </div>
+                </div>
+                <!-- <div class="contact-item">
+                  <div class="icon">↗</div>
+                  <div>
+                    <b>Website</b
+                    ><a
+                      href="https://www.creativepmc.in"
+                      target="_blank"
+                      rel="noopener"
+                      >www.creativepmc.in</a
+                    >
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            <div class="offices">
+              <div class="office">
+                <b>HEAD OFFICE · NASHIK</b>
+                <p>
+                  12, Gulmohour Bunglow, Ganesh Colony, Upnagar, Nashik (M.H.) –
+                  422 006
+                </p>
+              </div>
+              <div class="office">
+                <b>REGIONAL OFFICE · BURHANPUR</b>
+                <p>
+                  8, First Floor, Tulsi Mall, Railway Station Road, Burhanpur
+                  (M.P.) – 450 331
+                </p>
+              </div>
+              <div class="office">
+                <b>BRANCH OFFICE · KHANDWA</b>
+                <p>
+                  Narayan Nagar, Opp. Bank of India, Jaswadi Road, Khandwa
+                  (M.P.) – 450 001
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  flex-wrap: wrap;
+                  margin-top: 8px;
+                "
+              >
+                <a class="btn btn-primary" href="mailto:info@creativepmc.in"
+                  >Email CEW ↗</a
+                >
+                <!-- <a
+                  class="btn"
+                  style="
+                    background: #fff;
+                    border: 1px solid var(--line);
+                    color: var(--ink);
+                  "
+                  href="https://wa.me/919764447626"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp ↗</a
+                > -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <img
+            src="site-assets/LOGO-removebg.png"
+            class="footer-logo"
+            alt="Creative Engineering Works"
+          />
+          <p>
+            Project Management Consultancy for electrical infrastructure,
+            renewable energy, cooling technology and e-mobility projects.
+          </p>
+          <div class="footer-badges">
+            <span>Honesty</span><span>Integrity</span><span>Transparency</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#home">Home</a><a href="#about">About CEW</a
+          ><a href="#expertise">Expertise</a><a href="#projects">Projects</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Expertise</h4>
+          <a href="#expertise">Transmission & Distribution</a
+          ><a href="#expertise">Solar Energy</a
+          ><a href="#expertise">Radiant Cooling</a
+          ><a href="#expertise">EV / E-Mobility</a
+          ><a href="#expertise">Smart Living</a>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Connect</h4>
+          <a href="tel:+919764447626">+91 97644 47626</a
+          ><a href="mailto:info@creativepmc.in">info@creativepmc.in</a
+          ><a href="https://www.creativepmc.in" target="_blank" rel="noopener"
+            >www.creativepmc.in ↗</a
+          ><span
+            >12, Gulmohour Bunglow, Ganesh Colony,<br />Upnagar, Nashik – 422
+            006</span
+          >
+          <div class="social">
+            <a aria-label="Email CEW" href="mailto:info@creativepmc.in">✉</a
+            ><a aria-label="Call CEW" href="tel:+919764447626">☎</a>
+            <!-- <a
+              aria-label="Visit CEW website"
+              href="https://www.creativepmc.in"
+              target="_blank"
+              rel="noopener"
+              >↗</a
+            > -->
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <div>
+          © <span id="year"></span> Creative Engineering Works. All rights
+          reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#contact">Enquiries</a><span>·</span
+          ><a href="#projects">Project Experience</a>
+        </div>
+      </div>
+      <div class="container image-credits">
+        <!-- <span
+          >Visual credits: CEW client presentation + Wikimedia Commons. Solar
+          India image: CC BY-SA 4.0; EV charging image: CC0; transmission image:
+          CC BY.</span
+        > -->
+      </div>
+    </footer>
+    <button class="topbtn" id="topbtn" aria-label="Back to top">↑</button>
+    <script>
+      const header = document.getElementById("header"),
+        menu = document.getElementById("menu"),
+        nav = document.getElementById("nav"),
+        topbtn = document.getElementById("topbtn");
+      menu.addEventListener("click", () => nav.classList.toggle("open"));
+      document
+        .querySelectorAll(".navlinks a")
+        .forEach((a) =>
+          a.addEventListener("click", () => nav.classList.remove("open")),
+        );
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", scrollY > 70);
+        topbtn.classList.toggle("show", scrollY > 600);
+      });
+      topbtn.onclick = () => scrollTo({ top: 0, behavior: "smooth" });
+      document.getElementById("year").textContent = new Date().getFullYear();
+      const obs = new IntersectionObserver(
+        (es) =>
+          es.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible");
+          }),
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((e) => obs.observe(e));
+      const glow = document.getElementById("glow");
+      window.addEventListener("pointermove", (e) => {
+        glow.style.left = e.clientX + "px";
+        glow.style.top = e.clientY + "px";
+      });
+    </script>
+  </body>
+</html>
